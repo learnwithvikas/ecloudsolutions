@@ -1,0 +1,264 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" *ngIf="shouldRun">
+  <mat-toolbar color="primary" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name">eCloud Solutions - Join the Digital Revolution</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'over'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list>
+        <a mat-list-item (click)="snav.close();click('00')">Home</a>
+        <h4>The Digital Revolution</h4>
+        <a mat-list-item (click)="snav.close();click('11')">Cloud Computing - What Why &amp; How</a>
+        <a mat-list-item (click)="snav.close();click('12')">Data Analytics &amp; AI</a>
+        <h4>Our Offerings</h4>
+        <a mat-list-item (click)="snav.close();click('21')">Migrate, Optimize &amp; Build on Cloud</a>
+        <a mat-list-item (click)="snav.close();click('22')">Process Automation with AI Bots</a>
+        <a mat-list-item (click)="snav.close();click('23')">Digital and Social Media Marketing</a>
+        <h4>About Us</h4>
+        <a mat-list-item (click)="snav.close();click('31')">Company Details</a>
+        <a mat-list-item (click)="snav.close();click('32')">Happy Customers</a>
+        <a mat-list-item (click)="snav.close();click('33')">Contact Us</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div *ngIf="selectedIndex=='00'">
+        <div class="title">
+          <img class="banner" src="../assets/cloudheader.jpg">
+          <!-- <h2>Cloud Solutions Pvt Ltd</h2> -->
+        </div>
+        <hr />
+        <div class="info">
+          <p>
+            It's time you look beyond, and grow out of the restrictions you have imposed on yourself. It is time to
+            come out of the legacy, and join the Digital Revolution that has started touching each aspect of life.
+            From the customer care to consumer analysis - from product design to sales - from innovation to
+            implementation - each aspect of your business can be enhanced manyfold by the infinite possibilities that
+            are well in reach of a common man.
+          </p>
+          <p class="quote">
+            Some companies work for reducing cost of the product, others for increasing the value of the
+            product. Very few that do both. Join the Digital Revolution to get there.
+          </p>
+          <p>
+            The Digital Revolution is not limited to using the cloud servers. There is immense potential to the
+            technology that can help you with massive cost savings by leveraging the cloud native infrastructures. The
+            technology can help you add multiple dimensions to your enterprise by leveraging the valuable data generated
+            by your application.
+          </p>
+          <p>
+            Today, the whole world looks up to India to play a leading role in the Digital Revolution. And we are
+            already leading. Projected to 350 Billion USD, the focus of Indian IT industry is shifting more and more
+            towards digitization of every corner of the world. Jeff Bezos (CEO of Amazon) announced an investment of 1
+            Billion USD - dedicated to the digitization of small and medium scale businesses in India.
+          </p>
+          <p>
+            This is a challenge as well as an opportunity - for each business. The Digital Revolution is flooding the
+            world. From the local Baniya shop to the hign tech Enterprises, each has a place in this Revolutionizing
+            Wave. Flow with it, or get washed away. That is the choice for each of us.
+          </p>
+          <p class="quote">
+            Industry does not respect Tradition. It only respects innovations - Satya Nadella (CEO Microsoft)
+          </p>
+          <p>
+            If you have the courage and vision to jump in and embrace the transformation, we are here to help you.
+            eCloudSolutions offers you the best of the technology and skills required to take your business where it
+            deserves to be. With a team of skilled and experienced professionals, we can provide you the best.
+          </p>
+          <p>
+            eCloudSolutions can help trigger your journey into the wide horizons of technology. We can help you reap the
+            infinite potential of the Digital Revolution.
+          </p>
+        </div>
+      </div>
+      <div class="info" *ngIf="selectedIndex=='11'">
+        <div class="title">
+          <img class="banner" src="../assets/cloud.jpg">
+          <h3>Cloud Computing - What, Why &amp; How</h3>
+        </div>
+        <hr />
+        <div class="info">
+          <p class="quote">
+            When you are on the Cloud, the Sky is your limit!
+          </p>
+          <p>
+            Cloud Computing provides wonderful possibilities for everyone. From a hundred dollar startup to a billion
+            dollar enterprise like Netflix, the cloud supports them all. Cloud computing provides for them all. The
+            scalability, affordability and functionality that the cloud provides is too good for anyone to ignore.
+          </p>
+          <p>
+            In spite of all the wonderful benefits of moving into the cloud, there are several misconceptions that seem
+            to hold back many businesses, preventing them from utilizing the wonders that are available on the cloud
+          </p>
+          <h4>Already on the Cloud!</h4>
+          <p>
+            This is the most common. In an hasty move to the cloud, people end up with a simple "Lift and
+            Drop" approach. Simply purchasing server instances on the cloud, to deploy their application as is.
+            This will surely reduce your maintenance effort, but may not result in real savings. You might even spend
+            more than you did, if the configurations are not good.
+          </p>
+          <p>
+            The value of migrating to the clouds is not just in getting rid of your local infrastructures. We can get
+            the real value when we understand the cloud services well. Then we can optimize our deployment and make it
+            rightly scalable. And that is just the begining. If we can get a serverless deployment, there is no limit to
+            the kind of savings and scalability that we can enjoy.
+          </p>
+          <h4>Security</h4>
+          <p>
+            "Data is insecure on the cloud". This is one of the most common misconception that people carry. But, the
+            fact is, anything that is connected to the internet is equally vulnerable to hackers. If your data is locked
+            into a hard disk, disconnected from any other digital media, the only risk you have is that of physical
+            damage. Apart from that, anything connected to the internet is equally vulnerable to the hackers, who are
+            always eager to break in. Your campus is as vulnerable as the cloud.
+          </p>
+          <p>
+            But, the point is, Amazon, Microsoft and Google understand security much better than we muggles do!
+            Naturally, they can secure our data much better than anyone else. Your data on the cloud is far more secure
+            than on your own campus - Just as your money in Citibank is a lot more secure than the cash burried in your
+            godowns.
+          </p>
+          <h4>Vendor Locking</h4>
+          <p>
+            When the concept of cloud computing was new, people were not sure of how long it would work. So people did
+            not want to trust Amazon with all that they had. People were nervous about - and planned for a day when the
+            clouds collapse and they would have to come back to their campus. But that is not the problem today. Cloud
+            Computing has survived the test of time. Yes, using the cloud to its fullest potential will mean getting
+            locked down to the cloud vendor.
+          </p>
+          <p>
+            But that is not a business risk any more. We know for sure that Amazon or Microsoft or Google are not going
+            anywhere! In fact, we are all locked down to Google for almost everything we do. Phones, mails, search,
+            maps, and what not. One cannot immagine a life without Google. But that is not a problem. Because Google is
+            not going anywhere.
+            Google, Microsoft and Amazon are too big to disappear overnight. We are absolutely safe when we depend on
+            them.
+          </p>
+        </div>
+      </div>
+      <div class="info" *ngIf="selectedIndex=='12'">
+        <div class="title">
+          <img src="../assets/data.jpg">
+          <h3>Data Analytics &amp; AI</h3>
+        </div>
+        <hr />
+        <div class="info">
+          <h4>
+            Data is the new Oil
+          </h4>
+          <p>
+            We have often heard them say - Data is the new Oil. But, unlike the traditional oil, data is available
+            everywhere, in abundance. Each of us is sitting on millions - only lacking the ability to dig down and
+            identify and utilize the data that we already have. Most of our applications generate a huge amount of data
+            - we don't even know
+            about it.
+          </p>
+          <p>
+            Migrating to the cloud does not bring out the data on a platter. But that makes it a lot easier for us to
+            identify an analyze such data. It is a lot easier to identify and leverage such data when our application is
+            on the cloud. If the cloud deployment is done well, we can create a better visibility into the process and
+            simplify the process of identifying and analyzing the useful data.
+          </p>
+          <p>
+            eCloudSolutions can help you begin the journey into Data - to identify and analyze the wealth of data hidden
+            in your routine business activities - that can be utilized towards a faster growth.
+          </p>
+          <h4>
+            AI is the new Electricity
+          </h4>
+          <p>
+            An apt remark by Prof - Andrew Ng (Stanford University). A few centuries ago, the world saw a major revamp
+            of almost every aspect of life - when electricity started penetrating the world. That was perhaps the
+            greatest revolutions recorded in history. A similar, or even wilder change is expected in the this decade -
+            as AI is touching each and every aspect of our life. AI is no longer limited to the research labs in
+            Stanford and MIT. It is now a part of our lives. And will continue to penetrate our lives in every way.
+          </p>
+          <p>
+            When we work on the cloud, we have access to some of the amazing AI based products. For example, you can
+            train Alexa to handle common customer queries all by herself! Or you can scan a paper and process the image
+            with very little effort.
+          </p>
+        </div>
+      </div>
+      <div class="info" *ngIf="selectedIndex=='21'">
+        <div class="title">
+          <img class="banner" src="../assets/security.jpg">
+          <h3>Migrate, Optimize &amp; Build on the Cloud</h3>
+        </div>
+        <hr />
+        <div class="info">
+          <p>
+
+          </p>
+        </div>
+      </div>
+      <div class="info" *ngIf="selectedIndex=='22'">
+        <div class="title">
+          <img class="banner" src="../assets/man-machine-friends.jpg">
+          <h3>Automation with AI Bots</h3>
+        </div>
+        <hr />
+        <div class="info">
+          <p>
+            A major impediment to the digital revolution is a routine task that that depend on a human.
+            Trained Alexa models or simple text based chatbots can help you automate a lot of stuff.
+            RPA based automation bots can ease out several routine and boring tasks that are an impediment to your
+            business flow.
+          </p>
+          <p>
+            eCloudSolutions can help you leverage the cloud solutions to this extent. We can help you through this
+            process right from analyzing your business process, to identify any opportunities for automation, and then
+            implementing the automation to ensure drastic improvements in cost and throughput.
+          </p>
+          <h4>Alexa / Cortana</h4>
+          <p>
+            Amazon Alexa is not limited to the <a href="https://amzn.to/2RR1mzv">Amazon Echo</a> that we can keep in our
+            home. There is a lot more to Alexa than the informative entertainment. We can train and customize Alexa to
+            your requirement, to talk to your customers or your work force in your absence. Similarly, Microsoft Cortana
+            is a promising tool that can help you add a human touch to your automation. Being cloud based services,
+            these are low cost and provide amazing possibilities.
+          </p>
+          <h4>IoT</h4>
+          <p>
+            Cloud Deployments also enable large scale IoT based automations that can help you cut on costs and provide a
+            wonderful user experience at a very low cost. Finger pring or Face recognition can simplify attendance
+            registers and access regulation. Sound activated lights and air conditioners, coffee heaters and water
+            coolers based on a predictive algorithm can drastically reduce power consumption.
+          </p>
+          <p>
+            You don't have to be a Google to have these on your campus. These IoT solutions are now available for
+            everyone.
+          </p>
+        </div>
+      </div>
+      <div class="info" *ngIf="selectedIndex=='23'">
+        <div class="title">
+          <img class="banner" src="../assets/security.jpg">
+          <h3>Digital &amp; Social Media Marketing</h3>
+        </div>
+        <hr />
+        <div class="info">
+          <p>
+            Announcing your busines to the world is as important as developing it. This includes developing websites,
+            search engine optimization, announcing on the social media, and a lot more. But does that help you stand
+            out? Almost everyone has a website. And everyone performs intensive SEO. But there is only one first page on
+            the Google Search! Everyone cannot fit in there! Almost everyone goes in for social media marketing. These
+            generic solutions are required, but are not enough.
+            You need a specific solution tailored to your business. It is important to take your website to the
+            customer. But it is even more important to have a high conversion ratio.
+          </p>
+          <p>
+            We will help you with each of these, with understanding and analysis of the visitors and their behavior
+            on your website. Based on this, we can provide specific solutions that can improve the conversion
+            ratio of a customer reaching your website.
+          </p>
+        </div>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<div *ngIf="!shouldRun">Loading...</div>
